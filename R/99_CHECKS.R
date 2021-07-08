@@ -4,7 +4,8 @@ checks.init <- function(x, y, sc, sc.method, y.type, force.trend) {
 	yt.opts <- c(NA, "bina", "cont")
 	ft.opts <- c(NA, "i", "d")
 
-	cond.01 <- !is.numeric(x) | !is.numeric(y) | !is.numeric(sc) 
+	cond.01 <- !is.numeric(x) | !is.numeric(y) | ifelse(length(sc) == 1, ifelse(is.numeric(sc) | is.na(sc), FALSE,  TRUE), 
+									    ifelse(is.numeric(sc), FALSE, TRUE))
 	cond.02 <- !sc.method[1]%in%scm.opts
 	cond.03 <- !y.type[1]%in%yt.opts
 	cond.04 <- !force.trend[1]%in%ft.opts
@@ -38,7 +39,6 @@ checks.iter <- function(d, d.cc, y.type) {
 			cond.03 <- !sum(d$y[!is.na(d$y)]%in%c(0, 1)) == length(d$y[!is.na(d$y)])
 			}
 		y.check <- y.type[1]
-		cond.03 <- FALSE
 		}
 	cond4 <- nrow(d.cc) == 0
 	cond.all <- c(cond.01, cond.02, cond.03, cond4)
