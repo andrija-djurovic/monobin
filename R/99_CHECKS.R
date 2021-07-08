@@ -5,7 +5,7 @@ checks.init <- function(x, y, sc, sc.method, y.type, force.trend) {
 	ft.opts <- c(NA, "i", "d")
 
 	cond.01 <- !is.numeric(x) | !is.numeric(y) | ifelse(length(sc) == 1, ifelse(is.numeric(sc) | is.na(sc), FALSE,  TRUE), 
-									    ifelse(is.numeric(sc), FALSE, TRUE))
+							    ifelse(is.numeric(sc), FALSE, TRUE))
 	cond.02 <- !sc.method[1]%in%scm.opts
 	cond.03 <- !y.type[1]%in%yt.opts
 	cond.04 <- !force.trend[1]%in%ft.opts
