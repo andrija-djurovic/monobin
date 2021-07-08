@@ -18,7 +18,7 @@ install.packages("monobin")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to solve a problem of monotonic binning of numeric risk factors:
 
 ``` r
 suppressMessages(library(monobin))
