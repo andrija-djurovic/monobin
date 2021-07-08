@@ -4,7 +4,7 @@ The change affects only the second element of functions' output and aligns it wi
 
 # monobin 0.1.1
 Planned actions:
-1. hange check for sc (function check.init)
+1. change check for sc (function check.init)
   replace: ```!is.numeric(sc)``` with ```ifelse(length(sc) == 1, ifelse(is.numeric(sc) | is.na(sc), FALSE,  TRUE), ifelse(is.numeric(sc), FALSE, TRUE))```
 
 2. check of y.type - does not work properly
