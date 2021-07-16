@@ -15,6 +15,7 @@ Description:Performs monotonic binning of numeric risk factor in credit rating m
 	forced by functions' argument. Missing values and other possible special values are treated 
 	separately from so-called complete cases.
 License: use_gpl3_license()
+URL: https://github.com/andrija-djurovic/monobin
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
