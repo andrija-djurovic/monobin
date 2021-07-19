@@ -9,7 +9,7 @@ Changes:
 
 2. check if binary target contains only 0/1 values (y.type argument check in the function check.iter)<br/>
    a) deleted the following line of the code form check.iter function: ```cond.03 <- FALSE```<br/>
-   b) additionally quotation marks corrected:  ``"3" = "stop('y is not 0/1 varibale)'",`` corrected to ```"3" = "stop('y is not 0/1 varibale')",```<br/>
+   b) quotation marks corrected:  ``"3" = "stop('y is not 0/1 varibale)'",`` corrected to ```"3" = "stop('y is not 0/1 varibale')",```<br/>
    
 3. github page now available: www.github.com/andrija-djurovic/monobin
    
