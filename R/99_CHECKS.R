@@ -37,6 +37,8 @@ checks.iter <- function(d, d.cc, y.type) {
 		} else {
 		if	(y.type[1] == "bina") {
 			cond.03 <- !sum(d$y[!is.na(d$y)]%in%c(0, 1)) == length(d$y[!is.na(d$y)])
+			} else {
+			cond.03 <- FALSE
 			}
 		y.check <- y.type[1]
 		}
