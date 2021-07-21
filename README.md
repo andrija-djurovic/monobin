@@ -35,11 +35,8 @@ cum.bin(x = gcd$amount, y = gcd$qual, g = 20, force.trend = "d")[[1]]
 ```
 ## monobin version 0.1.1
 
-This version is still not available on CRAN only on github. Minor changes in this version refer to:
-1. special case value functions' argument which now accepts NA only, not producting the error that numeric vector is needed
-2. check if binary target contains only 0/1 values
-
-in order to install latest version from github, user can use the follwoing code:
+This version is on github as well.
+In order to install latest version from github, user can use the follwoing code:
 ```r
 library(devtools)
 install_github("andrija-djurovic/monobin")
