@@ -13,4 +13,3 @@ Changes:
    
 3. github page now available: www.github.com/andrija-djurovic/monobin
    
- Until new CRAN realise, github version 0.1.1 will be updated.
