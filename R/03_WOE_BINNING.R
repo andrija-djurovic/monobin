@@ -43,7 +43,7 @@
 #'
 #'@importFrom stats cor isoreg pt sd weighted.mean
 #'@importFrom Hmisc cut2
-#'@importFrom dplyr group_by summarise ungroup mutate
+#'@import dplyr
 #'@export
 
 #iso.binning
