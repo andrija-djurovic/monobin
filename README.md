@@ -10,7 +10,7 @@ separately from so-called complete cases.
 
 ## Installation
 
-You can install the released version of monobin from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of monobin from [CRAN](https://CRAN.R-project.org) executing the following code in R session:
 
 ``` r
 install.packages("monobin")
