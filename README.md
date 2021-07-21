@@ -35,7 +35,7 @@ cum.bin(x = gcd$amount, y = gcd$qual, g = 20, force.trend = "d")[[1]]
 ```
 ## monobin version 0.1.1
 
-This version is on github as well.
+This version is on github as well.</br>
 In order to install latest version from github, user can use the follwoing code:
 ```r
 library(devtools)
