@@ -15,6 +15,11 @@ You can install the released version of monobin from [CRAN](https://CRAN.R-proje
 ``` r
 install.packages("monobin")
 ```
+In order to install latest version from github, user can use the follwoing code:
+```r
+library(devtools)
+install_github("andrija-djurovic/monobin")
+```
 
 ## Example
 
@@ -33,14 +38,7 @@ amount.bin.1[[1]]
 #force trend to decreasing
 cum.bin(x = gcd$amount, y = gcd$qual, g = 20, force.trend = "d")[[1]]
 ```
-## monobin version 0.1.1
 
-This version is available on github as well.</br>
-In order to install latest version from github, user can use the follwoing code:
-```r
-library(devtools)
-install_github("andrija-djurovic/monobin")
-```
 
 
 
