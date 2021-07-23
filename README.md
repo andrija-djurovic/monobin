@@ -15,7 +15,7 @@ You can install the released version of monobin from [CRAN](https://CRAN.R-proje
 ``` r
 install.packages("monobin")
 ```
-In order to install latest version from github, user can use the follwoing code:
+In order to install latest version from github, you can use the follwoing code:
 ```r
 library(devtools)
 install_github("andrija-djurovic/monobin")
