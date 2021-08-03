@@ -3,7 +3,7 @@ This is a small release focusing on fixing the bin indexing for categorization o
 The change affects only the second element of functions' output and aligns it with summary table indexing of the bins. 
 
 # monobin 0.1.1
-Changes:
+Changes:<br/>
 1. special case value functions' argument now accepts NA only, not producing the error that numeric vector is needed (check for sc argument in the function check.init):<br/>
    ```!is.numeric(sc)``` replaced with ```ifelse(length(sc) == 1, ifelse(is.numeric(sc) | is.na(sc), FALSE,  TRUE), ifelse(is.numeric(sc), FALSE, TRUE))```
 
