@@ -12,4 +12,8 @@ Changes:<br/>
    b) quotation marks corrected:  ``"3" = "stop('y is not 0/1 varibale)'",`` corrected to ```"3" = "stop('y is not 0/1 varibale')",```<br/>
    
 3. github page now available: www.github.com/andrija-djurovic/monobin
+
+# monobin 0.1.2
+Changes:<br/>
+1. typo in checks.iter function corrected: "3" = "stop('y is not 0/1 varibale')" 
    
