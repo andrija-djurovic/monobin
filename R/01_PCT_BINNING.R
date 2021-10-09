@@ -49,7 +49,6 @@
 #'@import dplyr
 #'@export
 
-#pct.binning
 pct.bin <- function(x, y, sc = c(NA, NaN, Inf), sc.method = "together", g = 15, 
 			  y.type = NA, woe.trend = TRUE, force.trend = NA) {
 	ops <- options(scipen = 20)
