@@ -41,7 +41,6 @@
 #'@import dplyr
 #'@export
 
-#iso.binning
 cum.bin <- function(x, y, sc = c(NA, NaN, Inf), sc.method = "together", g = 15, y.type = NA,
 			  force.trend = NA) {
 	ops <- options(scipen = 20)
