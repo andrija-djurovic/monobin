@@ -46,7 +46,6 @@
 #'@import dplyr
 #'@export
 
-#woe.binning
 woe.bin <- function(x, y, sc = c(NA, NaN, Inf), sc.method = "together", y.type = NA, 
 			 min.pct.obs = 0.05, min.avg.rate = 0.01, woe.gap = 0.1, force.trend = NA) {
 	ops <- options(scipen = 20)
