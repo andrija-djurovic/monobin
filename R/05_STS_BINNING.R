@@ -55,7 +55,6 @@
 #'@import dplyr
 #'@export
 
-#statistical test binning
 sts.bin <- function(x, y, sc = c(NA, NaN, Inf), sc.method = "together", y.type = NA, 
 			 min.pct.obs = 0.05, min.avg.rate = 0.01, p.val = 0.05, force.trend = NA) {
 	ops <- options(scipen = 20)
