@@ -104,7 +104,6 @@
 #'@import dplyr
 #'@export
 
-#iso.binning
 iso.bin <- function(x, y, sc = c(NA, NaN, Inf), sc.method = "together", y.type = NA, 
 			 min.pct.obs = 0.05, min.avg.rate = 0.01, force.trend = NA) {
 	ops <- options(scipen = 20)
