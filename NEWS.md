@@ -15,6 +15,6 @@ Changes:<br/>
 
 # monobin 0.1.2
 Changes:<br/>
-1. typo in checks.iter function corrected: ```"3" = "stop('y is not 0/1 varibale')"``` - variable (thanks to Kevin Maher for spotting and reporting the typo)<br/>
+1. typo in ```checks.iter``` function corrected: ```"3" = "stop('y is not 0/1 varibale')"``` - variable (thanks to Kevin Maher for spotting and reporting the typo)<br/>
 2. new binning algorithm driven by decision tree is implemented - ```mdt.bin```.
    
