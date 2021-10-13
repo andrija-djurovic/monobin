@@ -38,7 +38,10 @@ amount.bin.1[[1]]
 #force trend to decreasing
 cum.bin(x = gcd$amount, y = gcd$qual, g = 20, force.trend = "d")[[1]]
 ```
-
+For more examples and package functions check the help page:
+```r
+help(package = monobin)
+```
 
 
 
