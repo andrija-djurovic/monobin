@@ -1,4 +1,4 @@
-# monobin
+# monobin 0.1.2
 
 <!-- badges: start -->
 <!-- badges: end -->
