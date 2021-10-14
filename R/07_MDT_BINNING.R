@@ -1,6 +1,6 @@
 #' Monotonic binning driven by decision tree
 #'
-#' \code{mdt.bin} implements monotonic binning driven by decision tree. As a spliting metric for continuous target
+#' \code{mdt.bin} implements monotonic binning driven by decision tree. As a splitting metric for continuous target
 #' algorithm uses sum of squared errors, while for the binary target Gini index is used.
 #'@param x Numeric vector to be binned.
 #'@param y Numeric target vector (binary or continuous).
