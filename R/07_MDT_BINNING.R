@@ -40,7 +40,7 @@
 
 mdt.bin <- function(x, y, g = 50, sc = c(NA, NaN, Inf), sc.method = "together", y.type = NA, 
 			 min.pct.obs = 0.05, min.avg.rate = 0.01, force.trend = NA) {
-	options(scipen = 20)
+	options(scipen = 20, warn = -1)
 
 	checks.init(x = x, y = y, sc = sc, sc.method = sc.method, 
 			y.type = y.type, force.trend = force.trend)
