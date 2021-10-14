@@ -50,7 +50,7 @@ In case of single unique value for \code{x} or \code{y} in complete cases (cases
 it will return data frame with info.
 }
 \description{
-\code{mdt.bin} implements monotonic binning driven by decision tree. As a spliting metric for continuous target
+\code{mdt.bin} implements monotonic binning driven by decision tree. As a splitting metric for continuous target
 algorithm uses sum of squared errors, while for the binary target Gini index is used.
 }
 \examples{
