@@ -160,6 +160,7 @@ mdt <- function(tbl, g, min.obs, min.rate, y.check, force.trend) {
 	res <- iso.summary(tbl = tbl[, c("y", "x", "bin")], bin = "bin")
 	res <- res[order(res$x.avg), ]
 	res$bin <- format.bin(x.lb = res$x.min, x.ub = res$x.max)
+	res$type <- "complete cases"
 return(as.data.frame(res))
 }
 
