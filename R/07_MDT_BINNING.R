@@ -79,7 +79,7 @@ mdt.bin <- function(x, y, g = 50, sc = c(NA, NaN, Inf), sc.method = "together", 
 	#complete cases	
 	ds.cc <- mdt(tbl = d.cc, g = g, min.obs = min.obs, min.rate = min.rate, 
 			 y.check = y.check, force.trend = force.trend)
-	ds <- bind_rows(ds.sc, ds.cc)
+	ds <- as.data.frame(bind_rows(ds.sc, ds.cc))
 	ds <- woe.calc(tbl = ds, y.check = y.check)
 	sc.u <- unique(sc)
 	sc.g <- ds$bin[ds$type%in%"special cases"]
