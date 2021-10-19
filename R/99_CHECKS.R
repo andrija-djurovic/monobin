@@ -50,8 +50,8 @@ checks.iter <- function(d, d.cc, y.type) {
 		which.cond <- 0
 		}
 	msger <- switch(as.character(which.cond), 
-			    "1" = "data.frame(bin = 'y has single unique value for complete cases')",
-			    "2" = "data.frame(bin = 'x has single unique value for complete cases')",	
+			    "1" = "data.frame(bin = 'y has a single unique value for the complete cases')",
+			    "2" = "data.frame(bin = 'x has a single unique value for the complete cases')",	
 			    "3" = "stop('y is not 0/1 variable')",
 			    "4" = "data.frame(bin = 'no complete cases')")
 return(list(which.cond, msger, y.check))
