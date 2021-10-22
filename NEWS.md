@@ -4,6 +4,7 @@ The change affects only the second element of functions' output and aligns it wi
 
 # monobin 0.1.1
 Changes:<br/>
+
 1. special case value functions' argument now accepts ```NA``` only, not producing the error that numeric vector is needed (check for sc argument in the function ```check.init```):<br/>
    ```!is.numeric(sc)``` replaced with ```ifelse(length(sc) == 1, ifelse(is.numeric(sc) | is.na(sc), FALSE,  TRUE), ifelse(is.numeric(sc), FALSE, TRUE))```
 
