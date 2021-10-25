@@ -1,6 +1,6 @@
 Package: monobin
 Title: Monotonic Binning for Credit Rating Models
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: 
     person(given = "Andrija",
            family = "Djurovic",
