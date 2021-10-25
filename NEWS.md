@@ -21,5 +21,5 @@ Changes:<br/>
 # monobin 0.2.1
 Changes:<br/>
 
-1. ```mdt.bin``` - correction of ```min.avg.rate``` condition for continuous target variable
+1. ```mdt.bin``` - correction of ```min.avg.rate``` condition for continuous target variable.
 
