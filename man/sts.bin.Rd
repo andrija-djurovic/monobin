@@ -62,16 +62,16 @@ data(gcd)
 maturity.bin <- sts.bin(x = gcd$maturity, y = gcd$qual)
 maturity.bin[[1]]
 tapply(gcd$qual, maturity.bin[[2]], function(x) c(length(x), sum(x), mean(x)))
-prop.test(x = c(sum(gcd$qual[maturity.bin[[2]]\%in\%"01 [4,8)"]), 
+prop.test(x = c(sum(gcd$qual[maturity.bin[[2]]\%in\%"01 (-Inf,8)"]), 
 	       sum(gcd$qual[maturity.bin[[2]]\%in\%"02 [8,16)"])), 
-       n = c(length(gcd$qual[maturity.bin[[2]]\%in\%"01 [4,8)"]),
+       n = c(length(gcd$qual[maturity.bin[[2]]\%in\%"01 (-Inf,8)"]),
 	       length(gcd$qual[maturity.bin[[2]]\%in\%"02 [8,16)"])), 
        alternative = "less", 
        correct = FALSE)$p.value
 #continuous target
 age.bin <- sts.bin(x = gcd$age, y = gcd$qual, y.type = "cont")
 age.bin[[1]]
-t.test(x = gcd$qual[age.bin[[2]]\%in\%"01 [19,26)"], 
+t.test(x = gcd$qual[age.bin[[2]]\%in\%"01 (-Inf,26)"], 
     y = gcd$qual[age.bin[[2]]\%in\%"02 [26,35)"],
     alternative = "greater")$p.value
 
