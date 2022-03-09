@@ -1,20 +1,20 @@
 Package: monobin
 Title: Monotonic Binning for Credit Rating Models
-Version: 0.2.1
+Version: 0.2.2
 Authors@R: 
     person(given = "Andrija",
            family = "Djurovic",
            role = c("aut", "cre"),
            email = "djandrija@gmail.com")
 Maintainer: Andrija Djurovic <djandrija@gmail.com>
-Description:Performs monotonic binning of numeric risk factor in credit rating models (PD, LGD, EAD) 
+Description: Performs monotonic binning of numeric risk factor in credit rating models (PD, LGD, EAD) 
 	development. All functions handle both binary and continuous target variable. 
 	Functions that use isotonic regression in the first stage of binning process have an additional 
 	feature for correction of minimum percentage of observations and minimum target rate per bin. 	
 	Additionally, monotonic trend can be identified based on raw data or, if known in advance,
 	forced by functions' argument. Missing values and other possible special values are treated 
 	separately from so-called complete cases.
-License: use_gpl3_license()
+License: GPL (>= 3)
 URL: https://github.com/andrija-djurovic/monobin
 Encoding: UTF-8
 LazyData: true
