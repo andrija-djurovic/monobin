@@ -1,2 +1,2 @@
-## version 0.2.1 - check_win_release() results
+## version 0.2.2 - check_win_release() results
 There were no ERRORs, WARNINGs or NOTEs. 
