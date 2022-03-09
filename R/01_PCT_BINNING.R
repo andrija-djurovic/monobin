@@ -48,7 +48,6 @@
 #'@importFrom Hmisc cut2
 #'@import dplyr
 #'@export
-
 pct.bin <- function(x, y, sc = c(NA, NaN, Inf), sc.method = "together", g = 15, 
 			  y.type = NA, woe.trend = TRUE, force.trend = NA) {
 	ops <- options(scipen = 20)
@@ -90,14 +89,16 @@ return(list(summary.tbl = ds, x.trans = x.trans))
 
 #formatting bins
 format.bin <- function(x.lb, x.ub) {
+	x.lb[1] <- -Inf
 	x.lb.lag <- c(x.lb[-1], Inf)
 	bin.n <- sprintf("%02d", 1:length(x.lb))  
 	bin.f <- ifelse(abs(x.lb - x.ub) < 1e-8, 
 			    paste0(bin.n, " [", round(x.lb, 4), "]"), 
-			    paste0(bin.n, " [", round(x.lb, 4), ",", round(x.lb.lag, 4), ")"))
+			    ifelse(x.lb == -Inf,
+				     paste0(bin.n, " (", round(x.lb, 4), ",", round(x.lb.lag, 4), ")"),
+				     paste0(bin.n, " [", round(x.lb, 4), ",", round(x.lb.lag, 4), ")")))
 return(bin.f)
 }
-
 #summary binary 
 tbl.summary.bina <- function(tbl, g.tot, b.tot) {
 	tbl %>% 
@@ -119,7 +120,6 @@ tbl.summary.bina <- function(tbl, g.tot, b.tot) {
 		woe = log(dist.g / dist.b),
 		iv.b = (dist.g - dist.b) * woe)
 }
-
 #binning binary
 pct.bin.bina <- function(tbl.sc, tbl.cc, method, g, force.trend) {	
 	y.tot <- nrow(tbl.sc) + nrow(tbl.cc)
@@ -160,7 +160,6 @@ pct.bin.bina <- function(tbl.sc, tbl.cc, method, g, force.trend) {
 	tbl.s <- bind_rows(tbl.sc.s, tbl.cc.s)
 return(as.data.frame(tbl.s))
 }
-
 #summary continuous
 tbl.summary.cont <- function(tbl, n.tot, y.tot) {
 	tbl %>% 
@@ -181,7 +180,6 @@ tbl.summary.cont <- function(tbl, n.tot, y.tot) {
 		woe = log(pct.y.sum / pct.obs),
 		iv.b = (pct.y.sum - pct.obs) * woe)
 }
-
 #binning continuous
 pct.bin.cont <- function(tbl.sc, tbl.cc, method, g, woe.trend, force.trend) {
 	n.tot <- nrow(tbl.sc) + nrow(tbl.cc)	
@@ -229,7 +227,6 @@ pct.bin.cont <- function(tbl.sc, tbl.cc, method, g, woe.trend, force.trend) {
 	tbl.s <- bind_rows(tbl.sc.s, tbl.cc.s)
 return(as.data.frame(tbl.s))
 }
-
 #transform x vector
 slice.variable <- function(x.orig, x.lb, x.ub, sc.u, sc.g) {
 	lx <- length(x.orig)
@@ -240,15 +237,18 @@ slice.variable <- function(x.orig, x.lb, x.ub, sc.u, sc.g) {
 				x.trans[x.trans%in%sc.u] <- "SC"
 				}
 		}
+	x.lb[1] <- -Inf
 	x.lb.lag <- c(x.lb[-1], Inf)
 	for	(i in 1:lg) {
 		x.lb.l <- x.lb[i]
 		x.lb.lag.l <- x.lb.lag[i]
 		x.ub.l <- x.ub[i]
 		bin.n <- sprintf("%02d", i)
-		bin.f <- ifelse(x.lb.l == x.ub.l, 
-				    paste0(bin.n, " [", x.lb.l, "]"), 
-				    paste0(bin.n, " [", x.lb.l, ",", x.lb.lag.l, ")"))
+		bin.f <- ifelse(abs(x.lb.l - x.ub.l) < 1e-8, 
+			    paste0(bin.n, " [", round(x.lb.l, 4), "]"), 
+			    ifelse(x.lb.l == -Inf,
+				     paste0(bin.n, " (", round(x.lb.l, 4), ",", round(x.lb.lag.l, 4), ")"),
+				     paste0(bin.n, " [", round(x.lb.l, 4), ",", round(x.lb.lag.l, 4), ")")))
 		rep.indx <- which(!x.orig%in%sc.u & !x.orig%in%sc.g & x.orig >= x.lb.l & x.orig <= x.ub.l)
 		x.trans[rep.indx] <- bin.f
 		}	

@@ -67,7 +67,6 @@
 #'@importFrom Hmisc cut2
 #'@import dplyr
 #'@export
-
 ndr.bin <- function(x, y, sc = c(NA, NaN, Inf), sc.method = "together", y.type = NA, 
 			 min.pct.obs = 0.05, min.avg.rate = 0.01, p.val = 0.05, force.trend = NA) {
 	options(scipen = 20)
@@ -109,6 +108,7 @@ ndr.bin <- function(x, y, sc = c(NA, NaN, Inf), sc.method = "together", y.type =
 					  sc.u = sc.u, sc.g = sc.g) 
 return(list(summary.tbl = ds, x.trans = x.trans))
 }
+
 #regression on nested dummies
 ndr <- function(tbl, mdb, p.val, y.check) {
 	if	(nrow(tbl) == 1) {

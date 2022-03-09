@@ -37,7 +37,6 @@
 #'@importFrom Hmisc cut2
 #'@import dplyr
 #'@export
-
 mdt.bin <- function(x, y, g = 50, sc = c(NA, NaN, Inf), sc.method = "together", y.type = NA, 
 			 min.pct.obs = 0.05, min.avg.rate = 0.01, force.trend = NA) {
 	options(scipen = 20)
@@ -163,7 +162,6 @@ mdt <- function(tbl, g, min.obs, min.rate, y.check, force.trend) {
 	res$type <- "complete cases"
 return(as.data.frame(res))
 }
-
 #node split function
 node.split <- function(tbl, min.obs, min.rate, y.check, node.thr, node.lr, monodir) {
 	tbl.s <- tbl %>%
@@ -231,14 +229,12 @@ node.split <- function(tbl, min.obs, min.rate, y.check, node.thr, node.lr, monod
 	y.r <- mean(tbl$y[tbl$x >= split.at])
 return(c(ssv = min(ssv), split = split.at, y.l = y.l, y.r = y.r))
 }
-
 #sse
 sse <- function(y, x, sp) {
 	res <- sum((y[x < sp] - mean(y[x < sp]))^2) +
 		 sum((y[x >= sp] - mean(y[x >= sp]))^2) 
 return(res)	
 }
-
 #gini
 gini <- function(y, x, sp) {
 	ct <- table(y, x < sp)

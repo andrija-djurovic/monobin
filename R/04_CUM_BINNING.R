@@ -40,7 +40,6 @@
 #'@importFrom Hmisc cut2
 #'@import dplyr
 #'@export
-
 cum.bin <- function(x, y, sc = c(NA, NaN, Inf), sc.method = "together", g = 15, y.type = NA,
 			  force.trend = NA) {
 	ops <- options(scipen = 20)
@@ -85,6 +84,7 @@ cum.bin <- function(x, y, sc = c(NA, NaN, Inf), sc.method = "together", g = 15, 
 					  sc.u = sc.u, sc.g = sc.g) 
 return(list(summary.tbl = ds, x.trans = x.trans))
 }
+
 #cumulative binning function
 cum.bin.aux <- function(tbl, force.trend, y.check){
 	tbl <- tbl[order(tbl$x), ]

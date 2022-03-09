@@ -45,7 +45,6 @@
 #'@importFrom Hmisc cut2
 #'@import dplyr
 #'@export
-
 woe.bin <- function(x, y, sc = c(NA, NaN, Inf), sc.method = "together", y.type = NA, 
 			 min.pct.obs = 0.05, min.avg.rate = 0.01, woe.gap = 0.1, force.trend = NA) {
 	ops <- options(scipen = 20)
@@ -85,6 +84,7 @@ woe.bin <- function(x, y, sc = c(NA, NaN, Inf), sc.method = "together", y.type =
 					  sc.u = sc.u, sc.g = sc.g) 
 return(list(summary.tbl = ds, x.trans = x.trans))
 }
+
 #correction for min woe gap
 tbl.correction.01 <- function(tbl, woe.gap, y.check) {
 	sc <- tbl[tbl$type%in%"special cases", ]
