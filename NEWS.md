@@ -23,3 +23,8 @@ Changes:<br/>
 
 1. ```mdt.bin``` - correction of ```min.avg.rate``` condition for continuous target variable.
 
+# monobin 0.2.2
+Changes:<br/>
+
+1. Small release focusing on fixing the first bin label formatting.
+
