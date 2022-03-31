@@ -37,7 +37,7 @@
 #' gcd$age.d[sample(1:nrow(gcd), 3)] <- 9999999999
 #' age.d.bin <- pct.bin(x = gcd$age.d, 
 #' 			   	y = gcd$qual, 
-#' 			   	sc = c(NA, NaN, Inf, 9999999999), 
+#' 			   	sc = c(NA, NaN, Inf, -Inf, 9999999999), 
 #' 			  	sc.method = "separately",
 #' 			   	force.trend = "d")
 #' age.d.bin[[1]]
