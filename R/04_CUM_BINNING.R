@@ -4,7 +4,7 @@
 #' This algorithm is known as MAPA (Monotone Adjacent Pooling Algorithm).
 #'@param x Numeric vector to be binned.
 #'@param y Numeric target vector (binary or continuous).
-#'@param sc Numeric vector with special case elements. Default values are \code{c(NA, NaN, Inf)}.
+#'@param sc Numeric vector with special case elements. Default values are \code{c(NA, NaN, Inf, -Inf)}.
 #' Recommendation is to keep the default values always and add new ones if needed. Otherwise, if these values exist
 #' in \code{x} and are not defined in the \code{sc} vector, function will report the error.  
 #'@param sc.method Define how special cases will be treated, all together or in separate bins.
@@ -40,7 +40,7 @@
 #'@importFrom Hmisc cut2
 #'@import dplyr
 #'@export
-cum.bin <- function(x, y, sc = c(NA, NaN, Inf), sc.method = "together", g = 15, y.type = NA,
+cum.bin <- function(x, y, sc = c(NA, NaN, Inf, -Inf), sc.method = "together", g = 15, y.type = NA,
 			  force.trend = NA) {
 	ops <- options(scipen = 20)
 	on.exit(options(ops)) 

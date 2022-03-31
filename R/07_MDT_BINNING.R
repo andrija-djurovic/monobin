@@ -5,7 +5,7 @@
 #'@param x Numeric vector to be binned.
 #'@param y Numeric target vector (binary or continuous).
 #'@param g Number of splitting groups for each node. Default is 50.
-#'@param sc Numeric vector with special case elements. Default values are \code{c(NA, NaN, Inf)}.
+#'@param sc Numeric vector with special case elements. Default values are \code{c(NA, NaN, Inf, -Inf)}.
 #' Recommendation is to keep the default values always and add new ones if needed. Otherwise, if these values exist
 #' in \code{x} and are not defined in the \code{sc} vector, function will report the error.  
 #'@param sc.method Define how special cases will be treated, all together or in separate bins.
@@ -37,7 +37,7 @@
 #'@importFrom Hmisc cut2
 #'@import dplyr
 #'@export
-mdt.bin <- function(x, y, g = 50, sc = c(NA, NaN, Inf), sc.method = "together", y.type = NA, 
+mdt.bin <- function(x, y, g = 50, sc = c(NA, NaN, Inf, -Inf), sc.method = "together", y.type = NA, 
 			 min.pct.obs = 0.05, min.avg.rate = 0.01, force.trend = NA) {
 	options(scipen = 20)
 
