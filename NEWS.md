@@ -31,5 +31,5 @@ Changes:<br/>
 # monobin 0.2.3
 Changes:<br/>
 
-1. For all functions, default values of argument ```sc```` extended for additional element ```-Inf```.
+1. For all functions, default values of argument ```sc``` extended for additional element ```-Inf```.
 
