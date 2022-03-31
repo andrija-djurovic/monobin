@@ -7,7 +7,7 @@
 cum.bin(
   x,
   y,
-  sc = c(NA, NaN, Inf),
+  sc = c(NA, NaN, Inf, -Inf),
   sc.method = "together",
   g = 15,
   y.type = NA,
@@ -19,7 +19,7 @@ cum.bin(
 
 \item{y}{Numeric target vector (binary or continuous).}
 
-\item{sc}{Numeric vector with special case elements. Default values are \code{c(NA, NaN, Inf)}.
+\item{sc}{Numeric vector with special case elements. Default values are \code{c(NA, NaN, Inf, -Inf)}.
 Recommendation is to keep the default values always and add new ones if needed. Otherwise, if these values exist
 in \code{x} and are not defined in the \code{sc} vector, function will report the error.}
 

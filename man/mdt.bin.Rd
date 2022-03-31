@@ -8,7 +8,7 @@ mdt.bin(
   x,
   y,
   g = 50,
-  sc = c(NA, NaN, Inf),
+  sc = c(NA, NaN, Inf, -Inf),
   sc.method = "together",
   y.type = NA,
   min.pct.obs = 0.05,
@@ -23,7 +23,7 @@ mdt.bin(
 
 \item{g}{Number of splitting groups for each node. Default is 50.}
 
-\item{sc}{Numeric vector with special case elements. Default values are \code{c(NA, NaN, Inf)}.
+\item{sc}{Numeric vector with special case elements. Default values are \code{c(NA, NaN, Inf, -Inf)}.
 Recommendation is to keep the default values always and add new ones if needed. Otherwise, if these values exist
 in \code{x} and are not defined in the \code{sc} vector, function will report the error.}
 
