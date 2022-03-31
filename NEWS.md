@@ -28,3 +28,8 @@ Changes:<br/>
 
 1. Small release focusing on fixing the first bin label formatting.
 
+# monobin 0.2.3
+Changes:<br/>
+
+1. For all functions, default values of argument ```sc```` extended for additional element ```-Inf```.
+
