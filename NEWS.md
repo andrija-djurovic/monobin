@@ -33,3 +33,8 @@ Changes:<br/>
 
 1. For all functions, default values of argument ```sc``` extended for additional element ```-Inf```.
 
+# monobin 0.2.2
+Changes:<br/>
+
+1. Bug fix in ```mdt.bin``` function - identification of upper bound for partitioning.
+
