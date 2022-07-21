@@ -180,10 +180,10 @@ node.split <- function(tbl, min.obs, min.rate, y.check, node.thr, node.lr, monod
 			    y.cs.a.rev = y.cs.rev / n.cs.rev)
 	if	(y.check == "bina") { 
 		lt <- min(which(tbl.s$n.cs >= min.obs & tbl.s$y.cs >= min.rate)) + 1
-		ut <- nrow(tbl.s) - min(which(tbl.s$n.cs.rev >= min.obs & tbl.s$y.cs.rev >= min.rate)) 
+		ut <- nrow(tbl.s) - min(which(tbl.s$n.cs.rev >= min.obs & tbl.s$y.cs.rev >= min.rate)) - 1
 		} else {
 		lt <- min(which(tbl.s$n.cs >= min.obs & tbl.s$y.cs.a >= min.rate)) + 1
-		ut <- nrow(tbl.s) - min(which(tbl.s$n.cs.rev >= min.obs & tbl.s$y.cs.a.rev >= min.rate)) 
+		ut <- nrow(tbl.s) - min(which(tbl.s$n.cs.rev >= min.obs & tbl.s$y.cs.a.rev >= min.rate)) - 1
 		}
 	if	(lt > ut) {
 		return(NA)
